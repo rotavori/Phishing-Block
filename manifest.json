@@ -1,0 +1,26 @@
+{
+    "name": "Phishing-Block",
+    "description": "An extension for google browser Chrome designated for prevent phishing schemes online.",
+    "version": "1.0",
+    "manifest_version": 2,
+    "homepage_url": "https://github.com/rotavori/Phishing-Block",
+
+    "browser_action": {
+        "default_popup": "popup.html"
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["phishing_check.js"]
+        }
+    ],
+    
+    "permissions": ["storage", "webRequest", "webRequestBlocking", "http://*/", "https://*/"],
+
+    "icons": {
+        "16": "icons/16.png",
+        "48": "icons/48.png",
+        "128": "icons/128.png"
+      }
+}
