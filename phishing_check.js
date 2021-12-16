@@ -12,6 +12,10 @@ chrome.storage.local.get('enabled', data => {
         for(var i = 0; i < tokens.length; i++){
         var len = tokens[i].length;
         if(tokens[i].charAt(len - 2) == tokens[i].charAt(len - 1)){
+
+            //dispatch message for alarm.js listener
+            chrome.extension.sendMessage({action: "play"})
+            
             alert("We noticed this part of the page URL ends with a double letter: "+
             tokens[i] +
             "\nPlease verify you entered the correct URL.")

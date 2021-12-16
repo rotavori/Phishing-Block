@@ -16,6 +16,8 @@
         }
     ],
     
+    "background": {"scripts": ["alarm.js"]},
+
     "permissions": ["storage", "webRequest", "webRequestBlocking", "http://*/", "https://*/"],
 
     "icons": {
